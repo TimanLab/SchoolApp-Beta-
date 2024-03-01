@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'operators/add_bustop.css' %}">
+    <title>Add BusStop</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add BusStop</h2>
+        <form id="addBusStopForm">
+            <label for="stageName">Bus Stage Name:</label>
+            <input type="text" id="stageName" name="stageName" required>
+            
+            <label for="pickDropTime">Pick/Drop Time:</label>
+            <input type="text" id="pickDropTime" name="pickDropTime" required>
+            
+            <button type="button" onclick="submitAddBusStopForm()">Add BusStop</button>
+        </form>
+    </div>
+    {% load static %}
+    <script src="{% static 'operators/add_bustop.js' %}"></script>
+</body>
+</html>

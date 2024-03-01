@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/admin_dashboard.css' %}">
+    <title>Admin Landing Page</title>
+</head>
+<body>
+    <div class="admin-landing-container">
+        <h2>Welcome, Admin!</h2>
+        <div class="button-container">
+            <button onclick="manageParents()">Manage Parents</button>
+            <button onclick="manageChildren()">Manage Children</button>
+            <button onclick="manageOperators()">Manage Operators</button>
+            <button onclick="busTrack()">Bus Track</button>
+            <button onclick="feedbackInbox()">Feedback Inbox</button>
+            <button onclick="busMileage()">Bus Mileage</button>
+            <button onclick="registerManagement()">Register Management</button>
+        </div>
+    </div>
+    {% load static %}
+    <script src="{% static 'admin/admin_dashboard.js' %}"></script>
+</body>
+</html>
+
+

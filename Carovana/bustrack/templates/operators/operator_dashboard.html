@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'operators/operator_dashboard.css' %}">
+    <title>Operator Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome, Operator!</h2>
+        <div class="button-container">
+            <button onclick="openAddChildForm()">Add Child</button>
+            <button onclick="openAddBusStopForm()">Add BusStop</button>
+            <button onclick="redirectBusTrack()">BusTrack</button>
+            <button onclick="openPopRegister()">Pop Register</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    {% load static %}
+    <script src="{% static 'operators/operator_dashboard.js' %}"></script>
+</body>
+</html>

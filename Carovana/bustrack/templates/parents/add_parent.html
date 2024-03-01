@@ -1,0 +1,21 @@
+<!-- bustrack/templates/bustrack/add_parent.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Parent</title>
+</head>
+<body>
+
+<h1>Add Parent</h1>
+
+<form method="post" action="{% url 'bustrack:add_parent' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

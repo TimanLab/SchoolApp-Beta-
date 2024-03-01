@@ -1,0 +1,36 @@
+<!-- exclusion_management.html -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Title>Eclusion List</Title>
+    
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/exclusion_management.css' %}">
+</head>
+
+<h2>Exclusion Management</h2>
+
+<!-- Form to submit exclusion -->
+<form id="exclusionForm" method="post" action="{% url 'exclusion_management' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" onclick="excludeChild()">Exclude Child</button>
+</form>
+
+<!-- Display list of submitted exclusions -->
+<h3>Exclusions</h3>
+<ul id="exclusionList">
+    {% for exclusion in exclusions %}
+        <li>{{ exclusion.child.name }} - {{ exclusion.reason }}</li>
+    {% endfor %}
+</ul>
+
+<script>
+    // JavaScript function to handle exclusion
+    function excludeChild() {
+        // Perform additional client-side validation if needed
+
+        // Submit the form
+        document.getElementById('exclusionForm').submit();
+    }
+</script>

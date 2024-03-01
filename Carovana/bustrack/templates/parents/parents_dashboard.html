@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'parents/parents_dashboard.css' %}">
+    <title>Parents Landing Page</title>
+</head>
+<body>
+    <div class="landing-container">
+        <h2>Welcome, Parent!</h2>
+        <div class="button-container">
+            <button onclick="redirectBusTrack()">BusTrack</button>
+            <button onclick="openFeedbackForm()">Feedback</button>
+            <button onclick="goBack()">Back</button>
+            <button onclick="Logout()">Logout</button>
+        </div>
+    </div>
+
+    {% load static %}
+    <script src="{% static 'parents/parents_dashboard.js' %}"></script>
+</body>
+</html>

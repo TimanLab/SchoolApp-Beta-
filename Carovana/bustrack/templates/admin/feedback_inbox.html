@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/feedback_inbox.css' %}">
+    <title>Feedback Inbox</title>
+</head>
+<body>
+    <div class="feedback-inbox-container">
+        <h2>Feedback Inbox</h2>
+        <div id="feedbackList" class="feedback-list">
+            <!-- Feedback will be dynamically added here using JavaScript -->
+        </div>
+        <button onclick="goBack()">Back</button>
+        <ul>
+            {% for entry in feedback %}
+                <li>{{ entry.message }}</li>
+            {% endfor %}
+             </ul>
+    </div>
+    {% load static %}
+    <script src="{% static 'admin/feedback_inbox.js' %}"></script>
+</body>
+</html>

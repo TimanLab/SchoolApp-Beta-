@@ -1,0 +1,28 @@
+<!-- add_remove_parent.html -->
+<!-- bustrack/templates/bustrack/add_parent.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/add_remove_parent.css' %}">
+    <title>Add Parent</title>
+</head>
+<body>
+<form id="ParentForm">
+    <label for="name">name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="bus">bus:</label>
+    <input type="text" id="bus" name="bus" required>
+    
+    <button type="button" onclick="submitAddParentForm()">Add Parent</button>
+</form>
+<!-- Display list of parents with option to remove -->
+{% load static %}
+    <script src="{% static 'admin/add_remove_parent.js' %}"></script>
+
+</body>
+</html>

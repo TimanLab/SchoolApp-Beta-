@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'operators/pop_register.css' %}">
+    <title>Pop Register</title>
+</head>
+<body>
+    <div class="pop-register-container">
+        <h2>Pop Register</h2>
+        <div id="popButtonsContainer" class="pop-buttons-container">
+            <!-- Pop buttons will be dynamically added here using JavaScript -->
+        </div>
+        <button onclick="goBack()">Back</button>
+    </div>
+    {% load static %}
+    <script src="{% static 'operators/pop_register.js' %}"></script>
+</body>
+</html>

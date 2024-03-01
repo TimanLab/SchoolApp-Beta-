@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'operators/add_child.css' %}">
+    <title>Add Child</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add Child</h2>
+        <form id="addChildForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="ucsNumber">UCS Number:</label>
+            <input type="text" id="ucsNumber" name="ucsNumber" required>
+            
+            <label for="grade">Grade:</label>
+            <input type="text" id="grade" name="grade" required>
+            
+            <button type="button" onclick="submitAddChildForm()">Add Child</button>
+        </form>
+    </div>
+    {% load static %}
+    <script src="{% static 'operators/add_child.js' %}"></script>
+</body>
+</html>

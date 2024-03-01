@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/bus_mileage.css' %}">
+    <title>Bus Mileage</title>
+</head>
+<body>
+    <div class="bus-mileage-container">
+        <h2>Bus Mileage</h2>
+        <label for="busSelector">Select Bus:</label>
+        <select id="busSelector" class="bus-selector">
+            <!-- Options will be dynamically added here using JavaScript -->
+        </select>
+        <p id="currentMileage">Current Mileage: <span id="mileageValue">0</span> km</p>
+        <button onclick="updateMileage()">Update Mileage</button>
+        <button onclick="goBack()">Back</button>
+    </div>
+    {% load static %}
+    <script src="{% static 'admin/bus_mileage.js' %}"></script>
+</body>
+</html>

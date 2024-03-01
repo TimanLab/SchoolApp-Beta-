@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.pop-register-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.pop-buttons-container {
+    margin-top: 20px;
+}
+
+.pop-button {
+    background-color: #5bc0de;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pop-button.left {
+    background-color: #d9534f;
+}
+
+.pop-button.right {
+    background-color: #5cb85c;
+}
+
+.pop-button:hover {
+    background-color: #46b8da;
+}

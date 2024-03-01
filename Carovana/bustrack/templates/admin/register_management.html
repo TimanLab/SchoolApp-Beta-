@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/register_management.css' %}">
+    <title>Register Management</title>
+</head>
+<body>
+    <div class="register-management-container">
+        <h2>Register Management</h2>
+            <ul>
+                {% for entry in pop_register %}
+                     <li>{{ entry.child.name }} - {{ entry.status }} - {{ entry.timestamp }}</li>
+                {% endfor %}
+            </ul>
+        <div id="registerList" class="register-list">
+            <!-- Register items will be dynamically added here using JavaScript -->
+        </div>
+        <button onclick="submitExcluded()">Submit Excluded</button>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    {% load static %}
+    <script src="{% static 'admin/register_management.js' %}"></script>
+</body>
+</html>

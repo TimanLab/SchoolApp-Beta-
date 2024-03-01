@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'parents/parentfeedback.css' %}">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div class="feedback-container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Feedback:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="button" onclick="submitFeedback()">Submit</button>
+            <button type="button" onclick="goBack()">Back</button>
+        </form>
+    </div>
+    {% load static %}
+    <script src="{% static 'parents/parentfeedback.js' %}"></script>
+</body>
+</html>

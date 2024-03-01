@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'parents/parentlogout.css' %}">
+    <title>Logout Button</title>
+</head>
+<body>
+    <div class="logout-container">
+        <button onclick="Logout()">Logout</button>
+    </div>
+    {% load static %}
+    <script src="{% static 'parents/parentlogout.js' %}"></script>
+</body>
+</html>
